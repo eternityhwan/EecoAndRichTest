@@ -15,7 +15,7 @@ public class SwaggerConfig {
 
         Info info = new Info()
                 .version("v1.0.0")
-                .title("EcoAndRich API 타이틀")
+                .title("EcoAndRich API 명세서")
                 .description("API Description");
 
         return new OpenAPI()

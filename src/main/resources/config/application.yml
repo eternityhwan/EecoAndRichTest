@@ -39,3 +39,12 @@ springdoc:
     doc-expansion: none # tag, operation 펼치는 방식
   paths-to-match:
     - /**
+#--------------------------
+# swagger info
+#--------------------------
+
+api:
+  url: http://apis.data.go.kr/6300000/mdlcnst/getmdlcnst
+  #key: gjOmV0s%2F0TwcItL7NefmNExj%2F1OZAbOg1mE9D5yPqh8HqqG42hxwchbpM7ncdDz%2BAEyuljySKLznnUeCUxPDug%3D%3D
+  key: gjOmV0s/0TwcItL7NefmNExj/1OZAbOg1mE9D5yPqh8HqqG42hxwchbpM7ncdDz+AEyuljySKLznnUeCUxPDug==
+

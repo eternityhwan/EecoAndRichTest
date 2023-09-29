@@ -4,7 +4,7 @@
 > SpringBoot와 Spring Data JPA를 사용해 기본적인 REST API를 구현하고,
 > Docker, AWS EC2를 이용해 서버를 배포했습니다.
  
-github: 
+github: https://github.com/eternityhwan/EecoAndRichTest/edit/main/README.md
 
 
 과제(프로젝트) 내용
@@ -29,6 +29,11 @@ ERD 모델링 이미지 파일
 
 API 명세서 :
 https://app.gitbook.com/o/Q39V2Y1vQnBqgcOfqv8C/s/W46t4xfjpniwnSWBWyZv/~/changes/1/
+
+![API IMAGE1](./API IMAGES/API 1.png)
+![API IMAGE2](./API IMAGES/API 2.png)
+![API IMAGE3](./API IMAGES/API 3.png)
+![API IMAGE4](./API IMAGES/API 4.png)
 
 
 

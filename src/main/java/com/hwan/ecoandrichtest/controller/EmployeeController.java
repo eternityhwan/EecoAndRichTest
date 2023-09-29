@@ -2,7 +2,7 @@ package com.hwan.ecoandrichtest.controller;
 
 import com.hwan.ecoandrichtest.domain.entity.Employee;
 import com.hwan.ecoandrichtest.domain.entity.JobHistory;
-import com.hwan.ecoandrichtest.repository.EmployeeHistoryRepository;
+import com.hwan.ecoandrichtest.repository.JobHistoryRepository;
 import com.hwan.ecoandrichtest.repository.EmployeeRepository;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -21,7 +21,7 @@ import java.util.List;
 public class EmployeeController {
 
     private final EmployeeRepository employeeRepository;
-    private final EmployeeHistoryRepository jobHistoryRepository;
+    private final JobHistoryRepository jobHistoryRepository;
 
     // 특정 사원의 현재 정보 조회 API
     @Operation(summary = "사원 정보 조회", description = "사원 정보 조회 API.")
@@ -32,6 +32,7 @@ public class EmployeeController {
                 .orElseThrow(() -> new EntityNotFoundException("Employee not found with id: " + id));
         return ResponseEntity.ok(employee);
     }
+
     @ExceptionHandler(EntityNotFoundException.class)
     public ResponseEntity<String> handleEntityNotFoundException(EntityNotFoundException ex) {
         // EntityNotFoundException이 발생한 경우 클라이언트에게 에러 응답을 반환합니다.
@@ -43,9 +44,12 @@ public class EmployeeController {
     @GetMapping("/history/{employeeId}")
     public ResponseEntity<List<JobHistory>> getEmployeeHistory(@PathVariable Long employeeId) {
         // 특정 사원의 이력 정보를 조회하고 반환합니다.
-        Employee employee = new Employee();
-        employee.setEmployeeId(employeeId);
+        Employee employee = employeeRepository.findById(employeeId)
+                .orElseThrow(() -> new EntityNotFoundException("Employee not found with id: " + employeeId));
+        System.out.println("Employee 객체 내용 출력 " + employee);
+
         List<JobHistory> employeeHistory = jobHistoryRepository.findByEmployee(employee);
+
         return ResponseEntity.ok(employeeHistory);
     }
 }

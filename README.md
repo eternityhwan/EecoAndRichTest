@@ -27,7 +27,9 @@ github:
 
 ERD 모델링 이미지 파일
 
-API 명세서 : Postman으로 작성
+API 명세서 :
+
+
 구현 기능과 기능별 상세한 설명
 프로젝트 폴더 구조
 Reference

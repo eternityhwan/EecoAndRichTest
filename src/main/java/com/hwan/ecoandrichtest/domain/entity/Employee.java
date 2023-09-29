@@ -10,7 +10,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "employees")
-@Getter @Setter @ToString
+@Getter @Setter
 public class Employee {
 
     @Id
@@ -52,6 +52,23 @@ public class Employee {
 
     public void setEmployeeId(Long id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", hireDate=" + hireDate +
+                ", job=" + (job != null ? job.getTitle() : null) + // 예시로 Job 엔티티의 getTitle() 메서드를 호출하여 사용
+                ", salary=" + salary +
+                ", commissionPct=" + commissionPct +
+                ", department=" + (department != null ? department.getName() : null) + // 예시로 Department 엔티티의 getName() 메서드를 호출하여 사용
+                ", manager=" + (manager != null ? manager.getFirstName() + " " + manager.getLastName() : null) + // 예시로 manager 엔티티의 이름을 합쳐서 사용
+                '}';
     }
 
 }

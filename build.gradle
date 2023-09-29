@@ -35,9 +35,9 @@ dependencies {
     // swagger api(springboot 3.13에서 작동)
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
     // xss예방 스프링 시큐리티
-//    implementation 'org.springframework.boot:spring-boot-starter-security'
-    // XML을 JSON으로 변환하고, 그 다음에는 JSON을 원하는 클래스(ApiResponse)로 변환
-    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.0'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
 }
 
 tasks.named('test') {

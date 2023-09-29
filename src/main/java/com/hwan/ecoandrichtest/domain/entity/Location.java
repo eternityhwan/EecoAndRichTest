@@ -7,7 +7,7 @@ import lombok.ToString;
 
 @Entity
 @Getter
-@Setter @ToString
+@Setter
 @Table(name = "locations")
 public class Location {
 
@@ -32,4 +32,14 @@ public class Location {
     @JoinColumn(name = "country_id")
     private Country country;
 
+    @Override
+    public String toString() {
+        return "Location{" +
+                "id=" + id +
+                ", streetAddress='" + streetAddress + '\'' +
+                ", postalCode='" + postalCode + '\'' +
+                ", city='" + city + '\'' +
+                ", stateProvince='" + stateProvince + '\'' +
+                '}';
+    }
 }

@@ -34,6 +34,8 @@ public class DepartmentService {
             BigDecimal newSalary = currentSalary.add(salaryIncrease);
             employee.setSalary(newSalary);
         }
+        // 변경 내용을 데이터베이스에 반영합니다.
+        departmentRepository.save(department);
     }
 }
 

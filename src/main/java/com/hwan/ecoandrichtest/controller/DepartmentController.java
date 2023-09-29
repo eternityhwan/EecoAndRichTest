@@ -5,8 +5,6 @@ import com.hwan.ecoandrichtest.domain.entity.Department;
 import com.hwan.ecoandrichtest.repository.DepartmentRepository;
 import com.hwan.ecoandrichtest.service.DepartmentService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -15,6 +13,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
 
 @Tag(name = "departments API", description = "부서 관련 API.")
 @RestController
@@ -45,12 +45,16 @@ public class DepartmentController {
     @Operation(description = "특정 부서의 급여를 특정 비율로 인상합니다.")
     // 특정 부서의 급여를 특정 비율로 인상하는 API
     @PostMapping("/{departmentName}/{increase-salary}")
-    public ResponseEntity<String> increaseSalary(
+    public ResponseEntity<Map<String, String>> increaseSalary(
             @PathVariable String departmentName,
             @RequestParam BigDecimal salaryIncreasePercentage
     ) {
         departmentService.increaseSalaryForDepartmentByName(departmentName, salaryIncreasePercentage);
-        return ResponseEntity.ok("Salary increased successfully.");
+
+        Map<String, String> response = new HashMap<>();
+        response.put("message", "Salary increased successfully.");
+
+        return ResponseEntity.ok(response);
     }
 }
 

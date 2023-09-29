@@ -10,12 +10,13 @@ import java.time.LocalDate;
 
 @IdClass(JobHistoryId.class)
 @Entity
-@Getter @Setter @ToString
+@Getter @Setter
+@ToString
 @Table(name = "job_history")
 public class JobHistory {
 
     @Id
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "employee_id")
     private Employee employee;
 
@@ -33,4 +34,5 @@ public class JobHistory {
     @ManyToOne
     @JoinColumn(name = "department_id")
     private Department department;
+
 }

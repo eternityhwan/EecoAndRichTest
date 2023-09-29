@@ -28,8 +28,7 @@ github:
 ERD 모델링 이미지 파일
 
 API 명세서 :
+https://app.gitbook.com/o/Q39V2Y1vQnBqgcOfqv8C/s/W46t4xfjpniwnSWBWyZv/~/changes/1/
 
 
-구현 기능과 기능별 상세한 설명
-프로젝트 폴더 구조
-Reference
+

@@ -34,7 +34,6 @@ public class DepartmentController {
         return ResponseEntity.ok(department);
     }
 
-
     @ExceptionHandler(EntityNotFoundException.class)
     public ResponseEntity<String> handleEntityNotFoundException(EntityNotFoundException exx) {
         // EntityNotFoundException이 발생한 경우 클라이언트에게 에러 응답을 반환합니다.

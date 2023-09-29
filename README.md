@@ -30,10 +30,10 @@ ERD 모델링 이미지 파일
 API 명세서 :
 https://app.gitbook.com/o/Q39V2Y1vQnBqgcOfqv8C/s/W46t4xfjpniwnSWBWyZv/~/changes/1/
 
-![API IMAGE1](./API IMAGES/API 1.png)
-![API IMAGE2](./API IMAGES/API 2.png)
-![API IMAGE3](./API IMAGES/API 3.png)
-![API IMAGE4](./API IMAGES/API 4.png)
+![API IMAGE1](IMAGES/API1.png)
+![API IMAGE2](IMAGES/API2.png)
+![API IMAGE3](IMAGES/API3.png)
+![API IMAGE4](IMAGES/API4.png)
 
 
 

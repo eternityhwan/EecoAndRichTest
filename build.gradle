@@ -36,8 +36,9 @@ dependencies {
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
     // xss예방 스프링 시큐리티
     implementation 'org.springframework.boot:spring-boot-starter-security'
-
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    // DB DataSource 암호화
+    implementation group: 'com.github.ulisesbocchio', name: 'jasypt-spring-boot-starter', version: '3.0.3'
 }
 
 tasks.named('test') {

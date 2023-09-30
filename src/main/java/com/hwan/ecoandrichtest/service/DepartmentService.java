@@ -33,6 +33,14 @@ public class DepartmentService {
             BigDecimal salaryIncrease = currentSalary.multiply(salaryIncreasePercentage);
             BigDecimal newSalary = currentSalary.add(salaryIncrease);
             employee.setSalary(newSalary);
+            // 변경 대상 가져오기
+            System.out.println("currentSalary" + currentSalary );
+            // 인상 비율
+            System.out.println("salaryIncrease" + salaryIncrease );
+            // 변경 급여
+            System.out.println("newSalary" + newSalary);
+            // 변경될 객체
+            System.out.println("employees" + employees );
         }
         // 변경 내용을 데이터베이스에 반영합니다.
         departmentRepository.save(department);

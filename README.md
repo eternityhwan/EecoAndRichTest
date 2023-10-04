@@ -36,8 +36,8 @@ API 명세서 :
 |              | /{departmentName}/{increase-salary} | POST       | 특정 부서의 급여를 특정 비율로 인상하는 API 입니다. | -        |
 | employees/v1 | /{id}                               | GET        | 사원 정보를 조회하는 API입니다                      | -        |
 |              | /history/{employeeId}               | GET        | 사원 이력 조회 API 입니다.                          | -        |
-| location/v1  | /                                   | GET        | 위치 정보 모두 조회하는 API                         | -        |
-|              | /{id}                               | GET        | 특정 사원 위치 조회 API                             |          |
+| location/v1  | /                                   | GET        | 위치 정보 모두 조회하는 API 입니다.                 | -        |
+|              | /{id}                               | GET        | 특정 사원 위치 조회 API 입니다.                     | -        |
 
 https://app.gitbook.com/o/Q39V2Y1vQnBqgcOfqv8C/s/W46t4xfjpniwnSWBWyZv/~/changes/1/
 

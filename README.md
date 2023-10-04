@@ -3,7 +3,7 @@
 > HR부서에서 인사관리를 할 때 필요한 사원정보 조회 기능을 제공하는 앱 입니다.
 > SpringBoot와 Spring Data JPA를 사용해 기본적인 REST API를 구현하고,
 > Docker, AWS EC2를 이용해 서버를 배포했습니다.
- 
+
 github: https://github.com/eternityhwan/EecoAndRichTest/edit/main/README.md
 
 
@@ -25,10 +25,25 @@ github: https://github.com/eternityhwan/EecoAndRichTest/edit/main/README.md
 6. 특정 부서의 급여를 특정 비율로 인상 및 사원 정보 업데이트 할 수 있는 API 구현
    RDBMS 스키마와 별개로 공공 데이터 포털( www.data.go.kr ) 등에서 임의의 API 선택 후 조회 가능하도록 커스터마이징된 API 구현
 
-ERD 모델링 이미지 파일
+
 
 API 명세서 :
+
+| Domain       | URL                                 | httpMethod | descrption                                          | 접근권한 |
+| ------------ | ----------------------------------- | ---------- | --------------------------------------------------- | -------- |
+| fetch-api    | /?{PageNo=1}?{numOfRows=10}         | GET        | 대전광역시 의료기관 현황을 제공하는 API 입니다.     | -        |
+| departments  | /{id}                               | GET        | 부서 정보 조회 API 입니다.                          | -        |
+|              | /{departmentName}/{increase-salary} | POST       | 특정 부서의 급여를 특정 비율로 인상하는 API 입니다. | -        |
+| employees/v1 | /{id}                               | GET        | 사원 정보를 조회하는 API입니다                      | -        |
+|              | /history/{employeeId}               | GET        | 사원 이력 조회 API 입니다.                          | -        |
+| location/v1  | /                                   | GET        | 위치 정보 모두 조회하는 API                         | -        |
+|              | /{id}                               | GET        | 특정 사원 위치 조회 API                             |          |
+
 https://app.gitbook.com/o/Q39V2Y1vQnBqgcOfqv8C/s/W46t4xfjpniwnSWBWyZv/~/changes/1/
+
+
+
+
 
 ![API IMAGE1](IMAGES/API1.png)
 ![API IMAGE2](IMAGES/API2.png)

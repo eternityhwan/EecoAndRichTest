@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echoandrich-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: echoandrich
+  template:
+    metadata:
+      labels:
+        app: echoandrich
+    spec:
+      containers:
+        - name: nginx
+          image: mirrorkyh/echoandrich:v2
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: echoandrich-service
+spec:
+  selector:
+    app: echoandrich
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort

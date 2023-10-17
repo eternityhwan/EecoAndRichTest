@@ -2,7 +2,7 @@
 # server
 #--------------------------
 server:
-  port: 8082
+  port: 8084
   shutdown: graceful  # graceful shutdown 적용
   servlet:
     encoding:

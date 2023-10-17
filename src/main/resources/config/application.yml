@@ -34,7 +34,7 @@ spring:
   application:
     name: EcoAndRich
   profiles:
-    active: dev
+    active: local
   banner:
     charset: UTF-8
     location: "classpath:config/app-banner.txt"

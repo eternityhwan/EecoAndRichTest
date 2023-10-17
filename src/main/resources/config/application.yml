@@ -2,7 +2,7 @@
 # server
 #--------------------------
 server:
-  port: 8081
+  port: 8082
   shutdown: graceful  # graceful shutdown 적용
   servlet:
     encoding:
@@ -34,7 +34,7 @@ spring:
   application:
     name: EcoAndRich
   profiles:
-    active: local
+    active: dev
   banner:
     charset: UTF-8
     location: "classpath:config/app-banner.txt"
